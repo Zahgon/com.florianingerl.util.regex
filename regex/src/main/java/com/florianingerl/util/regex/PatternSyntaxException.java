@@ -22,7 +22,6 @@
  * or visit www.oracle.com if you need additional information or have any
  * questions.
  */
-
 package com.florianingerl.util.regex;
 
 /**
@@ -32,86 +31,73 @@ package com.florianingerl.util.regex;
  * @author unascribed
  * @since 1.4
  */
-
 public class PatternSyntaxException extends IllegalArgumentException {
-	private static final long serialVersionUID = -3864639126226059218L;
 
-	private final String desc;
-	private final String pattern;
-	private final int index;
+    private static final long serialVersionUID = -3864639126226059218L;
 
-	/**
-	 * Constructs a new instance of this class.
-	 *
-	 * @param desc
-	 *            A description of the error
-	 *
-	 * @param regex
-	 *            The erroneous pattern
-	 *
-	 * @param index
-	 *            The approximate index in the pattern of the error, or
-	 *            <code>-1</code> if the index is not known
-	 */
-	public PatternSyntaxException(String desc, String regex, int index) {
-		this.desc = desc;
-		this.pattern = regex;
-		this.index = index;
-	}
+    private final String desc;
 
-	/**
-	 * Retrieves the error index.
-	 *
-	 * @return The approximate index in the pattern of the error, or <code>-1</code>
-	 *         if the index is not known
-	 */
-	public int getIndex() {
-		return index;
-	}
+    private final String pattern;
 
-	/**
-	 * Retrieves the description of the error.
-	 *
-	 * @return The description of the error
-	 */
-	public String getDescription() {
-		return desc;
-	}
+    private final int index;
 
-	/**
-	 * Retrieves the erroneous regular-expression pattern.
-	 *
-	 * @return The erroneous pattern
-	 */
-	public String getPattern() {
-		return pattern;
-	}
+    /**
+     * Constructs a new instance of this class.
+     *
+     * @param desc
+     *            A description of the error
+     *
+     * @param regex
+     *            The erroneous pattern
+     *
+     * @param index
+     *            The approximate index in the pattern of the error, or
+     *            <code>-1</code> if the index is not known
+     */
+    public PatternSyntaxException(String desc, String regex, int index) {
+        this.desc = desc;
+        this.pattern = regex;
+        this.index = index;
+    }
 
-	private static final String nl = System.getProperty("line.separator");
+    /**
+     * Retrieves the error index.
+     *
+     * @return The approximate index in the pattern of the error, or <code>-1</code>
+     *         if the index is not known
+     */
+    public int getIndex() {
+        throw new UnsupportedOperationException("STUB: not implemented");
+    }
 
-	/**
-	 * Returns a multi-line string containing the description of the syntax
-	 * error and its index, the erroneous regular-expression pattern, and a
-	 * visual indication of the error index within the pattern.
-	 *
-	 * @return The full detail message
-	 */
-	public String getMessage() {
-		StringBuffer sb = new StringBuffer();
-		sb.append(desc);
-		if (index >= 0) {
-			sb.append(" near index ");
-			sb.append(index);
-		}
-		sb.append(nl);
-		sb.append(pattern);
-		if (index >= 0) {
-			sb.append(nl);
-			for (int i = 0; i < index; i++)
-				sb.append(' ');
-			sb.append('^');
-		}
-		return sb.toString();
-	}
+    /**
+     * Retrieves the description of the error.
+     *
+     * @return The description of the error
+     */
+    public String getDescription() {
+        throw new UnsupportedOperationException("STUB: not implemented");
+    }
 
+    /**
+     * Retrieves the erroneous regular-expression pattern.
+     *
+     * @return The erroneous pattern
+     */
+    public String getPattern() {
+        throw new UnsupportedOperationException("STUB: not implemented");
+    }
+
+    private static final String nl = System.getProperty("line.separator");
+
+    /**
+     * Returns a multi-line string containing the description of the syntax
+     * error and its index, the erroneous regular-expression pattern, and a
+     * visual indication of the error index within the pattern.
+     *
+     * @return The full detail message
+     */
+    public String getMessage() {
+        throw new UnsupportedOperationException("STUB: not implemented");
+    }
 }

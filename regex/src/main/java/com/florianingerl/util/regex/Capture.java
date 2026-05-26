@@ -14,45 +14,46 @@ package com.florianingerl.util.regex;
  */
 public class Capture {
 
-	private CharSequence text;
-	private int start;
-	private int end;
+    private CharSequence text;
 
-	Capture(CharSequence text, int start, int end) {
-		this.text = text;
-		this.start = start;
-		this.end = end;
-	}
+    private int start;
 
-	/**
-	 * Returns the start index of the range of the input sequence that was
-	 * captured
-	 * 
-	 * @return The start index of the range of the input sequence that was
-	 *         captured
-	 */
-	public int getStart() {
-		return start;
-	}
+    private int end;
 
-	/**
-	 * Returns the end index of the range of the input sequence that was
-	 * captured
-	 * 
-	 * @return The end index of the range of the input sequence that was
-	 *         captured
-	 */
-	public int getEnd() {
-		return end;
-	}
+    Capture(CharSequence text, int start, int end) {
+        this.text = text;
+        this.start = start;
+        this.end = end;
+    }
 
-	/**
-	 * Returns the substring of the input sequence that was captured
-	 * 
-	 * @return The substring of the input sequence that was captured
-	 */
-	public String getValue() {
-		return text.subSequence(start, end).toString();
-	}
+    /**
+     * Returns the start index of the range of the input sequence that was
+     * captured
+     *
+     * @return The start index of the range of the input sequence that was
+     *         captured
+     */
+    public int getStart() {
+        throw new UnsupportedOperationException("STUB: not implemented");
+    }
 
+    /**
+     * Returns the end index of the range of the input sequence that was
+     * captured
+     *
+     * @return The end index of the range of the input sequence that was
+     *         captured
+     */
+    public int getEnd() {
+        throw new UnsupportedOperationException("STUB: not implemented");
+    }
+
+    /**
+     * Returns the substring of the input sequence that was captured
+     *
+     * @return The substring of the input sequence that was captured
+     */
+    public String getValue() {
+        throw new UnsupportedOperationException("STUB: not implemented");
+    }
 }
